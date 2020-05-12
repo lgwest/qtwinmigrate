@@ -2,13 +2,32 @@ cmake_minimum_required(VERSION 3.12.0)
 
 project(mfc2qt)
 
+add_definitions(-D_WIN32_WINNT=0x0601)
+
+set(QTWINMIGRATE_DIR ${PROJECT_SOURCE_DIR}/../../src)
+include_directories(${QTWINMIGRATE_DIR})
+
+set(QTWINMIGRATE_FILES
+${QTWINMIGRATE_DIR}/qwinwidget.cpp
+${QTWINMIGRATE_DIR}/qwinwidget.h
+${QTWINMIGRATE_DIR}/qwinhost.cpp
+${QTWINMIGRATE_DIR}/qwinhost.h
+${QTWINMIGRATE_DIR}/qmfcapp.cpp
+${QTWINMIGRATE_DIR}/qmfcapp.h
+)
+
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
+find_package(Qt5 COMPONENTS Core Widgets Gui REQUIRED)
 
-add_definitions(-D_WIN32_WINNT=0x0601)
+include_directories(Qt5Gui_PRIVATE_INCLUDE_DIRS)
 
-find_package(Qt5 COMPONENTS Core Widgets REQUIRED)
+#https://gist.github.com/giucam/3b5f685330bf3ab21aa5c684072d9a12
+#foreach(dir ${Qt5Widgets_INCLUDE_DIRS})
+#    include_directories(${dir}/${Qt5Gui_VERSION_STRING}/QtGui/)
+#endforeach(dir)
+#include_directories(${Qt5Gui_PRIVATE_INCLUDE_DIRS})
 
 add_subdirectory(step1)
 add_subdirectory(step2)

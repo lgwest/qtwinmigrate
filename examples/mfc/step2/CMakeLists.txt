@@ -19,5 +19,5 @@ StdAfx.cpp
 StdAfx.h
 )
 
-add_executable(${PROJECT_NAME} WIN32 ${SRC})
-target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Widgets)
+add_executable(${PROJECT_NAME} WIN32 ${SRC} ${QTWINMIGRATE_FILES})
+target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Widgets Qt5::Gui)
