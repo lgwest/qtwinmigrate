@@ -2,7 +2,7 @@ TEMPLATE = app
 TARGET	 = QtMfc4
 
 DEFINES -= UNICODE
-DEFINES += _AFXDLL WINVER=0x0500
+DEFINES += _AFXDLL WINVER=0x0601
 QMAKE_LIBS_QT_ENTRY =
 
 HEADERS = childview.h mainframe.h qtmfc.h stdafx.h
