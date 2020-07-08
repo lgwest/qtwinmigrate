@@ -31,5 +31,7 @@ include_directories(Qt5Gui_PRIVATE_INCLUDE_DIRS)
 
 add_subdirectory(step1)
 #add_subdirectory(step2)
-add_subdirectory(step5)
+#add_subdirectory(step3)
+#add_subdirectory(step4)
+#add_subdirectory(step5)
 
