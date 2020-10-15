@@ -1,6 +1,7 @@
-cmake_minimum_required(VERSION 3.12.0)
+cmake_minimum_required(VERSION 3.14.0)
 
-project(mfc2qt)
+
+project(mfc2qt LANGUAGES CXX)
 
 add_definitions(-D_WIN32_WINNT=0x0601)
 
@@ -30,7 +31,7 @@ include_directories(Qt5Gui_PRIVATE_INCLUDE_DIRS)
 #include_directories(${Qt5Gui_PRIVATE_INCLUDE_DIRS})
 
 add_subdirectory(step1)
-#add_subdirectory(step2)
+add_subdirectory(step2)
 #add_subdirectory(step3)
 #add_subdirectory(step4)
 #add_subdirectory(step5)
