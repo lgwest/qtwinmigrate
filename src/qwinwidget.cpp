@@ -62,7 +62,7 @@
 
 #if QT_VERSION >= 0x050000
 #include <QWindow>
-#include <qpa/qplatformnativeinterface.h>
+#include <QtGui/5.9.9/QtGui/qpa/qplatformnativeinterface.h> // TODO: wrong solution to find this include file, what is correct way?
 #define QT_WA(unicode, ansi) unicode
 #endif
 

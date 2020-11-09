@@ -19,5 +19,7 @@ Resource.h
 StdAfx.cpp
 StdAfx.h
 )
+
+#include_directories(${CMAKE_CURRENT_BINARY_DIR})
 add_executable(${PROJECT_NAME} WIN32 ${SRC})
 target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Widgets)

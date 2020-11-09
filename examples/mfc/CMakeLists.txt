@@ -22,7 +22,8 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 find_package(Qt5 COMPONENTS Core Widgets Gui REQUIRED)
 
-include_directories(Qt5Gui_PRIVATE_INCLUDE_DIRS)
+include_directories(Qt5Gui_PRIVATE_INCLUDE_DIRS )
+#include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 #https://gist.github.com/giucam/3b5f685330bf3ab21aa5c684072d9a12
 #foreach(dir ${Qt5Widgets_INCLUDE_DIRS})
