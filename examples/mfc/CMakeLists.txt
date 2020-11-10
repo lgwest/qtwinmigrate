@@ -31,6 +31,7 @@ include_directories(Qt5Gui_PRIVATE_INCLUDE_DIRS )
 #endforeach(dir)
 #include_directories(${Qt5Gui_PRIVATE_INCLUDE_DIRS})
 
+add_subdirectory(step0)
 add_subdirectory(step1)
 add_subdirectory(step2)
 add_subdirectory(step3)
