@@ -62,7 +62,8 @@
 
 #if QT_VERSION >= 0x050000
 #include <QWindow>
-#include <QtGui/5.9.9/QtGui/qpa/qplatformnativeinterface.h> // TODO: wrong solution to find this include file, what is correct way?
+// Use: `include_directories(${Qt5Gui_PRIVATE_INCLUDE_DIRS})` for file below in cmake
+#include <qpa/qplatformnativeinterface.h>
 #define QT_WA(unicode, ansi) unicode
 #endif
 

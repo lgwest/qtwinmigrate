@@ -22,14 +22,15 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 find_package(Qt5 COMPONENTS Core Widgets Gui REQUIRED)
 
-include_directories(Qt5Gui_PRIVATE_INCLUDE_DIRS )
-#include_directories(${CMAKE_CURRENT_BINARY_DIR})
-
 #https://gist.github.com/giucam/3b5f685330bf3ab21aa5c684072d9a12
+# alternative to Qt5Gui_PRIVATE_INCLUDE_DIRS
 #foreach(dir ${Qt5Widgets_INCLUDE_DIRS})
 #    include_directories(${dir}/${Qt5Gui_VERSION_STRING}/QtGui/)
 #endforeach(dir)
-#include_directories(${Qt5Gui_PRIVATE_INCLUDE_DIRS})
+
+# Qt5Gui_PRIVATE_INCLUDE_DIRS needed for #include <qpa/qplatformnativeinterface.h> in qwinwidget.cpp
+message("Qt5Gui_PRIVATE_INCLUDE_DIRS ${Qt5Gui_PRIVATE_INCLUDE_DIRS}")
+include_directories(${Qt5Gui_PRIVATE_INCLUDE_DIRS})
 
 add_subdirectory(step0)
 add_subdirectory(step1)
