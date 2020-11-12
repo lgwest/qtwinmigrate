@@ -117,7 +117,7 @@ void MainFrame::Dump(CDumpContext& dc) const
 
 /////////////////////////////////////////////////////////////////////////////
 // MainFrame message handlers
-void MainFrame::OnSetFocus(CWnd* pOldWnd)
+void MainFrame::OnSetFocus(CWnd* /*pOldWnd*/)
 {
 	// forward focus to the view window
 	m_wndView.SetFocus();
