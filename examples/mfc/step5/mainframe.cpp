@@ -39,6 +39,8 @@
 ****************************************************************************/
 
 #include <QtGui>
+#include <QMenuBar>
+#include <QMessageBox>
 
 #include "mainframe.h"
 #include "childview.h"
