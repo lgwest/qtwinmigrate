@@ -22,7 +22,7 @@ src/QWinWidget
 src/qwinwidget.cpp
 src/qwinwidget.h
 )
-add_library(${PROJECT_NAME} ALIAS qtwinmigrate::qtwinmigrate)
+add_library(${PROJECT_NAME}::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Widgets Qt5::Gui)
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/src)
 
